@@ -6,6 +6,7 @@ public class Main {
                 .setSurname("Иванов")
                 .build();
         System.out.println(human1);
+        System.out.println(human1.getAge());
 
         Person human2 = new PersonBuilder()
                 .setName("Иван")
