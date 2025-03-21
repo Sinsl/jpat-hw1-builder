@@ -3,7 +3,7 @@ import java.util.OptionalInt;
 public class Person {
     protected final String name;
     protected final String surname;
-    private OptionalInt age;
+    private OptionalInt age = OptionalInt.empty();
     private String address = "";
 
     public Person(String name, String surname) {
@@ -23,7 +23,7 @@ public class Person {
     }
 
     public boolean hasAge() {
-        return this.age != null && this.age.isPresent();
+        return this.age.isPresent();
     }
 
     public boolean hasAddress() {
@@ -39,7 +39,7 @@ public class Person {
     }
 
     public OptionalInt getAge() {
-        return this.age != null ? this.age : OptionalInt.empty();
+        return this.age;
     }
 
     public String getAddress() {
